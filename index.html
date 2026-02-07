@@ -1,129 +1,222 @@
-<!doctype html>
-<html ng-app="ECApp" lang="en">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <meta name="viewport" content="width=device-width">
-    <title>MaxBax</title>
-    <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700|Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="styles/normalize.min.css">
-    <link rel="stylesheet" href="styles/foundation.min.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Massimo Bartoli | Senior Frontend Developer & IT Consultant</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+	<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+	<style>
+		html {
+			scroll-behavior: smooth;
+		}
+
+		@keyframes float {
+			0% {
+				transform: translateY(0px);
+			}
+
+			50% {
+				transform: translateY(-10px);
+			}
+
+			100% {
+				transform: translateY(0px);
+			}
+		}
+
+		.float-anim {
+			animation: float 6s ease-in-out infinite;
+		}
+
+		.hero-bg {
+			background-image: url('./images/background.jpg');
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	</style>
 </head>
-<body>
 
-	<div class="fixed animate-opacity" ng-show="showTopBar" init-after-delay="showTopBar=true">
-		<div class="top-bar-background animate-opacity" ng-show="!siteHeaderVisible||topBarExpanded"></div>
-		<nav class="top-bar" ng-class="{ 'expanded':topBarExpanded }">
-			<ul class="title-area">
-				<li class="name">
-					<h1 class="site-title animate-opacity" ng-show="!mainTitleVisible||topBarExpanded"><a href="/">MaxBax</a></h1>
-				</li>
-				<li class="toggle-topbar menu-icon"><a href="" ng-click="topBarExpanded=!topBarExpanded"><span>Menu</span></a></li>
-			</ul>
+<body class="bg-gray-950 text-gray-100 font-sans">
 
-			<section class="top-bar-section">
-				<ul class="right">
-					<li><a href="#vision">About</a></li>
-					<li><a href="#contacts">Contacts</a></li>
-					<li><a href="index-it.html"><strong>IT</strong></a></li>
-				</ul>
-			</section>
-		</nav>
-	</div>
+	<!-- NAVBAR -->
+	<nav class="fixed w-full z-50 bg-gray-950/80 backdrop-blur border-b border-gray-800">
+		<div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+			<div class="flex items-center gap-3">
+				<img src="./images/logo.png" alt="Logo" class="h-10 w-auto" />
+			</div>
+			<div class="hidden md:flex gap-8 text-sm items-center">
+				<a href="#about" class="hover:text-blue-400 transition">About</a>
+				<a href="#skills" class="hover:text-blue-400 transition">Skills</a>
+				<a href="#experience" class="hover:text-blue-400 transition">Experience</a>
+				<a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+				<a href="https://github.com/maxbax" target="_blank"
+					class="border border-gray-600 px-4 py-2 rounded-xl hover:border-blue-400 transition text-xs">GitHub</a>
+			</div>
+		</div>
+	</nav>
 
-	<header id="site-header" in-view="siteHeaderVisible=$inview" in-view-offset="-45">
-		<h1 class="site-title" in-view="mainTitleVisible=$inview" in-view-offset="-40">MaxBax</h1>
-		<p id="mission">
-                    <strong>Information technology consulting</strong>
-		</p>
-	</header>
+	<!-- HERO -->
+	<section class="min-h-screen flex items-center relative overflow-hidden hero-bg">
+		<div class="absolute inset-0 bg-black/70"></div>
+		<div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-indigo-600/10 to-transparent"></div>
 
-	<section id="vision" class="row">
-		<div class="small-12 columns">
-			<p>
-				I'm a consultant specializing in web and mobile applications
-			</p>
-            <p>
-				I experience in the IT world by working with medium and large companies and managing projects in various 
-				technologies: Web applications (React), mobile app (Android native, React native and Flutter), GIS project (Oracle
-				Spatia, PostGis), J2EE projects, WebService, client / server applications in C#
-			</p>
-            <p>
-				I carry out professional training activities: Frontendes courses (React, Typescript, Testing), Java (Basic and 
-				Advanced), Android, PostgreSQL + PostGIS and more
-            </p>
+		<div class="max-w-6xl mx-auto px-6 py-32 grid md:grid-cols-2 gap-12 items-center relative">
+			<div data-aos="fade-up">
+				<h1 class="text-4xl md:text-6xl font-bold leading-tight">
+					Massimo Bartoli
+				</h1>
+				<p class="mt-6 text-xl text-gray-300 max-w-xl">
+					Senior Frontend Developer, Mobile Developer (Flutter) and IT Consultant specialized in modern web
+					architectures, high-performance user interfaces, and enterprise digital platforms.
+				</p>
+
+				<div class="mt-10 flex gap-4 flex-wrap">
+					<a href="#contact"
+						class="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-2xl font-semibold shadow-lg transition">
+						Work With Me
+					</a>
+					<a href="http://it.linkedin.com/in/maxbax"
+						class="border border-gray-500 hover:border-blue-400 px-8 py-4 rounded-2xl transition">
+						LinkedIn
+					</a>
+					<a href="https://github.com/maxbax" target="_blank"
+						class="border border-gray-500 hover:border-blue-400 px-8 py-4 rounded-2xl transition">
+						GitHub
+					</a>
+				</div>
+			</div>
+
+			<div class="hidden md:block float-anim" data-aos="fade-left">
+				<img src="./images/logo.png" alt="Logo Large" class="opacity-70 max-w-xs" />
+			</div>
 		</div>
 	</section>
 
-	<section id="projects" class="row">
-		<div class="small-12 columns">
-			<h3>Projects</h3>
-			<p>
-				<a href="http://funbax.maxbax.it">Funbax</a> is an experiment project created with React Native
+	<!-- ABOUT -->
+	<section id="about" class="py-24 border-t border-gray-900">
+		<div class="max-w-4xl mx-auto px-6 text-center">
+			<h2 class="text-3xl md:text-4xl font-bold" data-aos="fade-up">About Me</h2>
+			<p class="mt-8 text-lg text-gray-400 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+				I design and build modern web and mobile applications with a strong focus on performance, scalability,
+				and user experience. My experience spans enterprise frontend architectures, Flutter mobile development,
+				design systems, and complex integration scenarios.
 			</p>
 		</div>
 	</section>
 
-	<section id="coders" class="row">
-		<div class="small-12 columns">
-			<h2>Massimo Bartoli</h2>
-			<p>
-				Project Manager and IT consultant. Specializing in software architectures. 15+ years of experience in web and 
-				mobile applications. Senior Programmer for React, Android and Java J2EE applications. 
-				Team leader in development groups on medium and large companies
-			</p>
-			<p>
-				<a href="http://it.linkedin.com/in/maxbax"><img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_profile_bluetxt_80x15.png" width="80" height="15" border="0" alt="View Massimo Bartoli's profile on LinkedIn"></a>
-			</p>
+	<!-- SKILLS -->
+	<section id="skills" class="py-24">
+		<div class="max-w-6xl mx-auto px-6">
+			<h2 class="text-3xl md:text-4xl font-bold text-center" data-aos="fade-up">Senior Frontend & Mobile Skills
+			</h2>
+
+			<div class="grid md:grid-cols-3 gap-8 mt-16">
+				<div class="bg-gray-900 p-8 rounded-3xl border border-gray-800 hover:border-blue-600 transition"
+					data-aos="zoom-in">
+					<h3 class="text-xl font-semibold">Modern JavaScript & TypeScript</h3>
+					<p class="mt-4 text-gray-400">Advanced ES6+, TypeScript, modular architectures, and maintainable
+						codebases.</p>
+				</div>
+
+				<div class="bg-gray-900 p-8 rounded-3xl border border-gray-800 hover:border-blue-600 transition"
+					data-aos="zoom-in" data-aos-delay="100">
+					<h3 class="text-xl font-semibold">React & Modern Frontend</h3>
+					<p class="mt-4 text-gray-400">SPA architectures, state management, and component-driven design.</p>
+				</div>
+
+				<div class="bg-gray-900 p-8 rounded-3xl border border-gray-800 hover:border-blue-600 transition"
+					data-aos="zoom-in" data-aos-delay="200">
+					<h3 class="text-xl font-semibold">Flutter Mobile Development</h3>
+					<p class="mt-4 text-gray-400">Cross-platform mobile apps and games development with high-performance
+						UI.</p>
+				</div>
+
+				<div class="bg-gray-900 p-8 rounded-3xl border border-gray-800 hover:border-blue-600 transition"
+					data-aos="zoom-in">
+					<h3 class="text-xl font-semibold">UI Architecture & Design Systems</h3>
+					<p class="mt-4 text-gray-400">Reusable component libraries, accessibility, and scalable UI patterns.
+					</p>
+				</div>
+
+				<div class="bg-gray-900 p-8 rounded-3xl border border-gray-800 hover:border-blue-600 transition"
+					data-aos="zoom-in" data-aos-delay="100">
+					<h3 class="text-xl font-semibold">Performance Optimization</h3>
+					<p class="mt-4 text-gray-400">Core Web Vitals optimization, bundle tuning, and runtime performance
+						strategies.</p>
+				</div>
+
+				<div class="bg-gray-900 p-8 rounded-3xl border border-gray-800 hover:border-blue-600 transition"
+					data-aos="zoom-in" data-aos-delay="200">
+					<h3 class="text-xl font-semibold">APIs & Integration</h3>
+					<p class="mt-4 text-gray-400">REST APIs, authentication flows, and complex system integrations.</p>
+				</div>
+			</div>
 		</div>
 	</section>
 
-	<section id="contacts" class="row">
-		<div class="small-12 columns">
-			<h2>Contact me</h2>
-			<p>Bartoli Massimo</p>
-			<p>Contact me at <a href="mailto:info@maxbax.it">info@maxbax.it</a></p>
+	<!-- EXPERIENCE -->
+	<section id="experience" class="py-24 border-t border-gray-900">
+		<div class="max-w-4xl mx-auto px-6">
+			<h2 class="text-3xl md:text-4xl font-bold text-center" data-aos="fade-up">Experience</h2>
+
+			<div class="mt-16 space-y-8">
+				<div class="bg-gray-900 p-8 rounded-3xl border border-gray-800" data-aos="fade-up">
+					<h3 class="text-xl font-semibold">Senior Frontend Developer & IT Consultant</h3>
+					<p class="mt-4 text-gray-400">
+						Design and development of enterprise web applications, frontend architectures, and
+						high-performance user interfaces.
+					</p>
+				</div>
+
+				<div class="bg-gray-900 p-8 rounded-3xl border border-gray-800" data-aos="fade-up" data-aos-delay="100">
+					<h3 class="text-xl font-semibold">Mobile App & Game Developer (Flutter)</h3>
+					<p class="mt-4 text-gray-400">
+						Development of cross-platform mobile applications and games using Flutter, focusing on
+						performance, UX quality, and scalable architectures.
+					</p>
+				</div>
+			</div>
 		</div>
 	</section>
 
-	<script src="scripts/angular.min.js"></script>
-	<script src="scripts/angular-animate.min.js"></script>
-	<script src="scripts/angular-inview.js"></script>
-	<script src="scripts/app.js"></script>
+	<!-- CONTACT -->
+	<section id="contact" class="py-24 border-t border-gray-900">
+		<div class="max-w-3xl mx-auto px-6 text-center">
+			<h2 class="text-3xl md:text-4xl font-bold" data-aos="fade-up">Let's Work Together</h2>
+			<p class="mt-6 text-gray-400" data-aos="fade-up" data-aos-delay="100">
+				Open to senior frontend development, mobile development (Flutter), and consulting collaborations.
+			</p>
 
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-BZRFMXQ3SR"></script>
+			<div class="flex justify-center gap-4 flex-wrap mt-10">
+				<a href="http://it.linkedin.com/in/maxbax"
+					class="bg-blue-600 hover:bg-blue-700 px-10 py-5 rounded-2xl font-semibold shadow-lg transition">
+					LinkedIn
+				</a>
+
+				<a href="https://github.com/maxbax" target="_blank"
+					class="border border-gray-600 hover:border-blue-400 px-10 py-5 rounded-2xl transition">
+					GitHub
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- FOOTER -->
+	<footer class="border-t border-gray-900">
+		<div class="max-w-6xl mx-auto px-6 py-10 text-center text-gray-500 text-sm">
+			© 2026 Massimo Bartoli — Personal Landing Page
+		</div>
+	</footer>
+
 	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'G-BZRFMXQ3SR');
+		AOS.init({ duration: 1000, once: true });
 	</script>
 
-	<script src="scripts/jquery.min.js"></script>
-	<script src="scripts/jquery.cookiesdirective.js"></script>
-	<script type="text/javascript">
-	// Using $(document).ready never hurts
-	$(document).ready(function(){
-		$.cookiesDirective({
-			explicitConsent: false,
-			privacyPolicyUri: 'privacy.html',			
-			inlineAction: true,
-			message: 'Hi, this site uses cookies :)',
-			impliedSubmitText: 'OK',
-			explicitCookieAcceptButtonText: 'OK',
-			explicitCookieAcceptanceLabel: 'I understand and accept',
-			position : 'bottom',			
-			cookieScripts: 'Google Analytics, LinkedIn',
-			impliedDisclosureText: 'More information ',
-			privacyPolicyLinkText: ' here',
-			backgroundColor: '#3284D6',
-			linkColor: '#ffffff',
-			multipleCookieScriptBeginningLabel: ' This site uses ',
-			explicitCookieDeletionWarning: ' You may delete the cookies. '
-		});
-	});
-	</script>
 </body>
+
 </html>
