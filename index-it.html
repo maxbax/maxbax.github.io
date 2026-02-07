@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="ECApp" lang="en">
+<html ng-app="ECApp" lang="it">
 <head>
     <meta name="viewport" content="width=device-width">
     <title>MaxBax</title>
@@ -17,16 +17,16 @@
 		<nav class="top-bar" ng-class="{ 'expanded':topBarExpanded }">
 			<ul class="title-area">
 				<li class="name">
-					<h1 class="site-title animate-opacity" ng-show="!mainTitleVisible||topBarExpanded"><a href="/">MaxBax</a></h1>
+					<h1 class="site-title animate-opacity" ng-show="!mainTitleVisible||topBarExpanded"><a href="/index-it.html">MaxBax</a></h1>
 				</li>
 				<li class="toggle-topbar menu-icon"><a href="" ng-click="topBarExpanded=!topBarExpanded"><span>Menu</span></a></li>
 			</ul>
 
 			<section class="top-bar-section">
 				<ul class="right">
-					<li><a href="#vision">About</a></li>
-					<li><a href="#contacts">Contacts</a></li>
-					<li><a href="index-it.html"><strong>IT</strong></a></li>
+					<li><a href="#vision">Info</a></li>
+					<li><a href="#contacts">Contatti</a></li>
+					<li><a href="index.html"><strong>EN</strong></a></li>
 				</ul>
 			</section>
 		</nav>
@@ -35,32 +35,32 @@
 	<header id="site-header" in-view="siteHeaderVisible=$inview" in-view-offset="-45">
 		<h1 class="site-title" in-view="mainTitleVisible=$inview" in-view-offset="-40">MaxBax</h1>
 		<p id="mission">
-                    <strong>Information technology consulting</strong>
+			<strong>Consulenza informatica</strong>
 		</p>
 	</header>
 
 	<section id="vision" class="row">
 		<div class="small-12 columns">
 			<p>
-				I'm a consultant specializing in web and mobile applications
+				Sono un consulente specializzato nella realizzazione di progetti Web o Mobile.
 			</p>
             <p>
-				I experience in the IT world by working with medium and large companies and managing projects in various 
-				technologies: Web applications (React), mobile app (Android native, React native and Flutter), GIS project (Oracle
-				Spatia, PostGis), J2EE projects, WebService, client / server applications in C#
-			</p>
+				Ho maturato esperienza nel mondo IT lavorando con medie e grosse aziende e gestendo progetti in diversi ambiti: 
+				applicazioni Web (React), app mobile (Android nativo, React native, Flutter), web GIS (Oracle Spatial, PostGis), 
+				progetti J2EE, WebService, applicazioni client/server in C#
+            </p>
             <p>
-				I carry out professional training activities: Frontendes courses (React, Typescript, Testing), Java (Basic and 
-				Advanced), Android, PostgreSQL + PostGIS and more
+				Svolgo anche attivit&agrave; di formazione professionale: corsi per frontender (React, Typescript, Testing), 
+				Java (Base e Avanzato), Android, PostgreSQL + PostGis e altro
             </p>
 		</div>
 	</section>
 
 	<section id="projects" class="row">
+		<h3>Progetti</h3>
 		<div class="small-12 columns">
-			<h3>Projects</h3>
 			<p>
-				<a href="http://funbax.maxbax.it">Funbax</a> is an experiment project created with React Native
+				<a href="http://funbax.maxbax.it">Funbax</a> e' un progetto sperimentale creato con React Native
 			</p>
 		</div>
 	</section>
@@ -69,21 +69,21 @@
 		<div class="small-12 columns">
 			<h2>Massimo Bartoli</h2>
 			<p>
-				Project Manager and IT consultant. Specializing in software architectures. 15+ years of experience in web and 
-				mobile applications. Senior Programmer for React, Android and Java J2EE applications. 
-				Team leader in development groups on medium and large companies
+				Consulente informatico. Specializzato nella progettazione di architetture software con pi&ugrave; di 15 anni 
+				di esperienza nella realizzazione di applicazioni web e mobile. 
+				Programmatore Senior in applicazioni React, Android e Java J2EE. Team leader in medie e grandi aziende
 			</p>
 			<p>
-				<a href="http://it.linkedin.com/in/maxbax"><img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_profile_bluetxt_80x15.png" width="80" height="15" border="0" alt="View Massimo Bartoli's profile on LinkedIn"></a>
+				<a href="http://it.linkedin.com/in/maxbax"><img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_profile_bluetxt_80x15.png" width="80" height="15" border="0" alt="Visualizza il profilo LinkedIn di Massimo Bartoli"></a>
 			</p>
 		</div>
 	</section>
 
 	<section id="contacts" class="row">
 		<div class="small-12 columns">
-			<h2>Contact me</h2>
+			<h2>Contatti</h2>
 			<p>Bartoli Massimo</p>
-			<p>Contact me at <a href="mailto:info@maxbax.it">info@maxbax.it</a></p>
+			<p>Contattami via email all'indirizzo <a href="mailto:info@maxbax.it">info@maxbax.it</a></p>
 		</div>
 	</section>
 
@@ -108,22 +108,24 @@
 	$(document).ready(function(){
 		$.cookiesDirective({
 			explicitConsent: false,
-			privacyPolicyUri: 'privacy.html',			
+			privacyPolicyUri: 'privacy-it.html',			
 			inlineAction: true,
-			message: 'Hi, this site uses cookies :)',
+			message: 'Ciao, questo sito utilizza cookies :)',
 			impliedSubmitText: 'OK',
 			explicitCookieAcceptButtonText: 'OK',
-			explicitCookieAcceptanceLabel: 'I understand and accept',
+			explicitCookieAcceptanceLabel: 'Ho capito e accetto',
 			position : 'bottom',			
 			cookieScripts: 'Google Analytics, LinkedIn',
-			impliedDisclosureText: 'More information ',
-			privacyPolicyLinkText: ' here',
+			impliedDisclosureText: 'Maggiori informazioni ',
+			privacyPolicyLinkText: ' qui',
 			backgroundColor: '#3284D6',
 			linkColor: '#ffffff',
-			multipleCookieScriptBeginningLabel: ' This site uses ',
-			explicitCookieDeletionWarning: ' You may delete the cookies. '
+			multipleCookieScriptBeginningLabel: ' Questo sito utilizza script ',
+			multipleCookieScriptEndLabel: ', che potrebbero impostare cookie. ',
+			explicitCookieDeletionWarning: ' &Egrave; possibile eliminare i cookie. '
 		});
 	});
 	</script>
+
 </body>
 </html>
